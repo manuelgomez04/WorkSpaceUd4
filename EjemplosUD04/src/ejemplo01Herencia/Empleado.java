@@ -11,6 +11,16 @@ public class Empleado extends Trabajador{
 		this.impuestos = impuestos;
 	}
 
+	
+	
+	public Empleado(String dni, double sueldo, double impuestos) {
+		super(dni);
+		this.sueldo = sueldo;
+		this.impuestos = impuestos;
+	}
+
+
+
 	public double getSueldo() {
 		return sueldo;
 	}
@@ -27,8 +37,17 @@ public class Empleado extends Trabajador{
 		this.impuestos = impuestos;
 	}
 
+
+
+	@Override
 	public String toString() {
-		return "Empleado [sueldo=" + sueldo + ", impuestos=" + impuestos + "]";
+		return super.toString()+" Empleado [sueldo=" + sueldo + ", impuestos=" + impuestos + "]";
+	}
+
+	public double calcularPaga() {
+		int cien = 100;
+		
+		return sueldo - (sueldo * (impuestos / cien));
 	}
 	
 	

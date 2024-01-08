@@ -12,6 +12,15 @@ public class Trabajador {
 		this.puesto = puesto;
 		this.dni = dni;
 	}
+	
+	
+
+	public Trabajador(String dni) {
+		super();
+		this.dni = dni;
+	}
+
+
 
 	public String getNombre() {
 		return nombre;
@@ -41,5 +50,8 @@ public class Trabajador {
 		return "Trabajador [nombre=" + nombre + ", puesto=" + puesto + ", dni=" + dni + "]";
 	}
 	
+	public double calcularPaga () {
+		return 0.0;
+	}
 	
 }
