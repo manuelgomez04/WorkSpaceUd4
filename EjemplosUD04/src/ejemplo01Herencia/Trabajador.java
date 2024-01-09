@@ -54,4 +54,13 @@ public class Trabajador {
 		return 0.0;
 	}
 	
+	
+	/*ESTO NO ES UN RETOQUE DE CALCULAR PAGA, ES OTRA COSA*/
+	public double calcularPagaV2 (double fijo) {
+
+		return fijo;
+		
+		
+	}
+	
 }

@@ -4,11 +4,9 @@ public class Principal {
 
 	public static void main(String[] args) {
 		
+		Trabajador t = new Trabajador ("Manuel", "Empleado", "975514123f");
 		
-		
-		Trabajador t = new Trabajador ("Manuel", "Empleado", "9756123f");
-		
-		Empleado e = new Empleado ("Manuel", "Empleado", "9756123f",2000, 15);
+		Empleado e = new Empleado ("Manuel", "Empleado", "142254w",2000, 15);
 		
 		Empleado e2 = new Empleado ("3C", 1500.00, 12.5);
 		
@@ -26,8 +24,6 @@ public class Principal {
 		System.out.println(e2.calcularPaga());
 		
 		System.out.println(c.calcularPaga());
-	
-		
-	}
+		}
 
 }
