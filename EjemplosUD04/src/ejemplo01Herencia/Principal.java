@@ -10,7 +10,7 @@ public class Principal {
 		
 		Empleado e2 = new Empleado ("3C", 1500.00, 12.5);
 		
-		Consultor c = new Consultor ("Juanjo", "Ni idea", "452315321z", 20, 20);
+		Consultor c = new Consultor ("Juanjo", "Ni idea", "452315321z", 45, 20);
 		
 		System.out.println(t);
 		System.out.println(e);
@@ -24,6 +24,9 @@ public class Principal {
 		System.out.println(e2.calcularPaga());
 		
 		System.out.println(c.calcularPaga());
+		
+		
+		c.avisarExtras();
 		}
 
 }

@@ -46,4 +46,10 @@ public class Consultor extends Trabajador{
 		return calcularPaga();
 	}
 	
+	public void avisarExtras () {
+		
+		if (horas > 40) {
+			System.out.println("Ha superado el límite de horas trabajadas");
+		}
+	}
 }
