@@ -60,6 +60,11 @@ public class Trabajador {
 
 		return fijo;
 		
+	}
+	
+	public void darBaja () {
+		
+		puesto = "Baja";
 		
 	}
 	
