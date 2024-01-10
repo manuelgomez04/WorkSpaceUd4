@@ -28,15 +28,14 @@ public class Portatil extends Ordenador {
 		this.precioSeguro = precioSeguro;
 	}
 
-	public double calcularprecioVenta(double porcentajeGanancia) {
+	public double calcularPrecioVenta(double porcentajeGanancia) {
 
 		double precioFinal = 0;
 
 		if (seguroPantalla) {
 			precioFinal = super.calcularPrecioVenta(porcentajeGanancia) + precioSeguro;
-		} else {
+		} else
 			precioFinal = super.calcularPrecioVenta(porcentajeGanancia);
-		}
 
 		return precioFinal;
 	}
