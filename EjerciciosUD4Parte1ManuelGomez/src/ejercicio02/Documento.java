@@ -49,8 +49,15 @@ public class Documento {
 
 	@Override
 	public String toString() {
-		return "Documento [nombreEmpresa=" + nombreEmpresa + ", cif=" + cif + ", telefono=" + telefono + ", direccion="
-				+ direccion + "]";
+		return "Nombre de la Empresa= " + nombreEmpresa + ", CIF= " + cif + ", Télefono= " + telefono + ", Dirección= "
+				+ direccion;
+	}
+	
+	public void imprimirDatos () {
+		System.out.println("Nombre de la empresa: "+nombreEmpresa);
+		System.out.println("CIF: "+ cif);
+		System.out.println("Teléfono de contacto: "+ telefono);
+		System.out.println("Dirección de la empresa: "+ direccion);
 	}
 
 }

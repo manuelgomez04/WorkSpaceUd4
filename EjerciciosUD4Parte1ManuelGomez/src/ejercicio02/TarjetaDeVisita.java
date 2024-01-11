@@ -39,8 +39,15 @@ public class TarjetaDeVisita extends Documento {
 
 	@Override
 	public String toString() {
-		return super.toString() + " TarjetaDeVisita [nombreEmpleado=" + nombreEmpleado + ", telefonoContacto="
-				+ telefonoContacto + ", dni=" + dni + "]";
+		return super.toString() + "  Nombre del empleado= " + nombreEmpleado + ", Teléfono de contacto= "
+				+ telefonoContacto + ", DNI= " + dni;
+	}
+
+	public void imprimirDatos() {
+		super.imprimirDatos();
+		System.out.println("Nombre del empleado : " + nombreEmpleado);
+		System.out.println("Teléfono de contacto del empleado: " + telefonoContacto);
+		System.out.println("DNI del empleado: " + dni);
 	}
 
 }

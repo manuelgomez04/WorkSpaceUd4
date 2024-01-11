@@ -5,22 +5,18 @@ public class Trabajador {
 	private String nombre;
 	private String puesto;
 	private String dni;
-	
+
 	public Trabajador(String nombre, String puesto, String dni) {
 		super();
 		this.nombre = nombre;
 		this.puesto = puesto;
 		this.dni = dni;
 	}
-	
-	
 
 	public Trabajador(String dni) {
 		super();
 		this.dni = dni;
 	}
-
-
 
 	public String getNombre() {
 		return nombre;
@@ -49,23 +45,22 @@ public class Trabajador {
 	public String toString() {
 		return "Trabajador [nombre=" + nombre + ", puesto=" + puesto + ", dni=" + dni + "]";
 	}
-	
-	public double calcularPaga () {
+
+	public double calcularPaga() {
 		return 0.0;
 	}
-	
-	
-	/*ESTO NO ES UN RETOQUE DE CALCULAR PAGA, ES OTRA COSA*/
-	public double calcularPagaV2 (double fijo) {
+
+	/* ESTO NO ES UN RETOQUE DE CALCULAR PAGA, ES OTRA COSA */
+	public double calcularPagaV2(double fijo) {
 
 		return fijo;
-		
+
 	}
-	
-	public void darBaja () {
-		
+
+	public void darBaja() {
+
 		puesto = "Baja";
-		
+
 	}
-	
+
 }

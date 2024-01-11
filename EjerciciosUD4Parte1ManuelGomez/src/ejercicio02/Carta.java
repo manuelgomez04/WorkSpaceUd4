@@ -18,7 +18,12 @@ public class Carta extends Documento {
 
 	@Override
 	public String toString() {
-		return super.toString() + " Carta [fecha=" + fecha + "]";
+		return super.toString() + " Fecha= " + fecha;
+	}
+
+	public void imprimirDatos() {
+		super.imprimirDatos();
+		System.out.println("Fecha: " + fecha);
 	}
 
 }
