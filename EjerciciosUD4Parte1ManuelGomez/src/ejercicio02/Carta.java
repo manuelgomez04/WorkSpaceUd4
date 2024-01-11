@@ -2,6 +2,7 @@ package ejercicio02;
 
 public class Carta extends Documento {
 	private String fecha;
+	private String nombreEmpresa;
 
 	public Carta(String nombreEmpresa, String cif, String telefono, String direccion, String fecha) {
 		super(nombreEmpresa, cif, telefono, direccion);
