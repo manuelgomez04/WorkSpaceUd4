@@ -43,20 +43,29 @@ public class Vehiculo {
 				+ categoriaEmisiones + "]";
 	}
 
-	public double calcularImpuesto() {
+	public double calcularImpuesto(double porcentajeCilindrada, double porcentajePotencia) {
+
 		double precio = 0;
 
-		if (categoriaEmisiones == 1) {
+		switch (categoriaEmisiones) {
+		case 1:
+			precio = 100;
+			break;
+
+		case 2:
 			precio = 200;
-		}
-		if (categoriaEmisiones == 2) {
+			break;
+
+		case 3:
 			precio = 300;
-		}
-		if (categoriaEmisiones == 3) {
+			break;
+
+		case 4:
 			precio = 400;
-		}
-		if (categoriaEmisiones == 4) {
-			precio = 500;
+			break;
+		default:
+			System.out.println("Diga categoría válida");
+			break;
 		}
 		return precio;
 	}

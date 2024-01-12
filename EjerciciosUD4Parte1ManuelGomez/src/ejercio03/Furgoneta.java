@@ -22,9 +22,9 @@ public class Furgoneta extends Vehiculo {
 		return "Furgoneta [caballosFurgo=" + impuestoMercancia + "]";
 	}
 
-	public double calcularImpuesto() {
+	public double calcularImpuesto(double porcentajeCilindrada, double porcentajeCaballos) {
 
-		return super.calcularImpuesto() + impuestoMercancia;
+		return super.calcularImpuesto(porcentajeCilindrada, porcentajeCaballos) + impuestoMercancia;
 
 	}
 }

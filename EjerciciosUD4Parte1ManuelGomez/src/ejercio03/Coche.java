@@ -22,9 +22,10 @@ public class Coche extends Vehiculo {
 		return "Coche [caballosCoche=" + caballosCoche + "]";
 	}
 
-	public double calcularImpuesto() {
+	public double calcularImpuesto(double porcentajeCilindrada, double porcentajeCaballos) {
 
-		double porcentaje = 0.25;
-		return super.calcularImpuesto() + caballosCoche * porcentaje;
+		double cien = 100;
+		return super.calcularImpuesto(porcentajeCilindrada, porcentajeCaballos)
+				+ caballosCoche * porcentajeCaballos / cien;
 	}
 }

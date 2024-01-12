@@ -22,9 +22,11 @@ public class Motocicleta extends Vehiculo {
 		return "Motocicleta [cilindrada=" + cilindrada + "]";
 	}
 
-	public double calcularImpuesto() {
+	public double calcularImpuesto(double porcentajeCilindrada, double porcentajeCaballos) {
 
-		double porcentaje = 0.6;
-		return super.calcularImpuesto() + cilindrada * porcentaje;
+		double cien = 100;
+
+		return super.calcularImpuesto(porcentajeCilindrada, porcentajeCaballos)
+				+ cilindrada * porcentajeCilindrada / cien;
 	}
 }
