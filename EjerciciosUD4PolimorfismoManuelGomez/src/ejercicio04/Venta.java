@@ -24,6 +24,16 @@ public class Venta {
 		return "Venta [listaLinea=" + Arrays.toString(listaLinea) + "]";
 	}
 
+	public double calcularTotal() {
+
+		double total = 0;
+
+		for (int i = 0; i < listaLinea.length; i++) {
+			total += listaLinea[i].calcularPrecioTotalPorProducto();
+		}
+		return total;
+	}
+
 	public void imprimirLista() {
 		for (int i = 0; i < listaLinea.length; i++) {
 			System.out.println(listaLinea[i]);

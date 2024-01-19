@@ -71,16 +71,7 @@ public class Principal {
 
 			case 2:
 
-				System.out.println("\t\t\t\t\t\t\tMERCADONA");
-				System.out.println();
-				System.out.println("\t\t\t" + direccion + "\t\t\t\tFecha: " + fecha);
-				System.out.println();
-				System.out.println("\t\t\tCIF: " + cif);
-				System.out.println(
-						"************************************************************************************************************************************************");
-				System.out.println("\tNombre\t\t\tPrecio Unitario\t\t\tIVA\t\tCantidad\t\t\tSubtotal");
-				System.out.printf("\t%s\t\t\t%.2f\t\t\t%.0f\t\t%d\t\t\t\t%.2f", El1.getNombre(),
-						El1.getPrecioUnitario(), El1.getIva(), lv1.getCantidad(), lv1.calcularPrecioTotalPorProducto());
+				/* El ticket se imprime mediante el array de líneas de venta */
 				break;
 			default:
 				break;
