@@ -6,19 +6,19 @@ public class Principal {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		String nombre, apellidos, usuario, aux;
-		int edad, tam = 5, indice = 0;
-		double saldo1 = 4500, saldo2 = 250, saldo3 = 6340, mantenimiento = 20;
+		String aux;
+		int tam = 5, indice = 0;
+		double saldo1 = 100, saldo2 = 100, saldo3 = 100, mantenimiento = 20;
 		double ingreso, retiro;
 		Cliente cliente, cliente2, cliente3;
 		Cuenta cuentaCorriente, cuentaJoven, cuentaEmpresa, lista[] = new Cuenta[tam];
 		Oficina oficina;
 
-		cliente = new Cliente("Israel", "Alcaraz Martínez", 25, "isal24");
-		cliente2 = new Cliente("Maria", "Esther Herrera", 16, "maes07");
-		cliente3 = new Cliente("Julio", "Vega Martoran", 30, "juve75");
+		cliente = new Cliente("Jesús", "López Ramírez", 25, "yisus");
+		cliente2 = new Cliente("Miguel", "Campos", 16, "mcamposleyenda");
+		cliente3 = new Cliente("Luismi", "López", 30, "lmgoat");
 
-		cuentaCorriente = new CuentaCorriente(cliente, saldo1, mantenimiento);
+		cuentaCorriente = new CuentaCorriente(cliente, saldo1, mantenimiento, mantenimiento);
 		cuentaJoven = new CuentaJoven(cliente2, saldo2);
 		cuentaEmpresa = new CuentaEmpresa(cliente3, saldo3);
 
@@ -31,7 +31,7 @@ public class Principal {
 
 		oficina = new Oficina(lista);
 
-		System.out.println("Introduzca cuanto desea ingresar:");
+		System.out.println("Introduzca cuánto desea ingresar:");
 		aux = sc.nextLine();
 		ingreso = Double.parseDouble(aux);
 		cuentaCorriente.ingresarDinero(ingreso);
@@ -54,7 +54,8 @@ public class Principal {
 
 		// Prueba de los métodos de oficina
 		System.out.printf("El dinero total de la oficina es de: %.2f€\n", oficina.totalDinero());
-		System.out.printf("El dinero gastado en las cuentas jóvenes es de: %.2f€\n", oficina.calcularGastos());
+		System.out.printf("El dinero gastado en las cuentas jóvenes es de: %.2f€\n",
+				oficina.calcularGastoCuentaJoven());
 		System.out.printf("El dinero ingresado por las cuentas de empresas es de: %.2f€\n",
 				oficina.calcularIngresosEmpresas());
 	}

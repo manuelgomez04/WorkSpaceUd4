@@ -37,7 +37,13 @@ public abstract class Publicacion implements IEjercicio01 {
 		this.prestado = prestado;
 	}
 
-	public abstract int prestados(Publicacion[] lista);
+	@Override
+	public String toString() {
+		return "Publicacion [anioPublicacion=" + anioPublicacion + ", nombre=" + nombre + ", prestado=" + prestado
+				+ "]";
+	}
+
+	public abstract int contarPrestados(Publicacion[] lista);
 
 	public abstract int publicacionesAnterioresA(Publicacion[] listado, int anio);
 

@@ -5,7 +5,7 @@ public class CuentaEmpresa extends Cuenta {
 	private int extra;
 
 	public CuentaEmpresa(Cliente usuario, double saldo) {
-		super(usuario, saldo, 0);
+		super(usuario, saldo);
 	}
 
 	public int getExtra() {
@@ -17,28 +17,22 @@ public class CuentaEmpresa extends Cuenta {
 	}
 
 	public double calcularSaldo() {
-		return getSaldo() + getMantenimiento();
+		return getSaldo();
 	}
 
 	public void ingresarDinero(double cantidad) {
-		double total = 0;
 
 		extra += 1;
-		total = super.getSaldo() + cantidad;
-		super.setSaldo(total);
+
+		super.setSaldo(getSaldo() + cantidad);
 	}
 
 	public void retirarDinero(double cantidad) {
-		double total = 0;
 
-		if (cantidad < super.getSaldo()) {
+		if (cantidad < getSaldo()) {
 
-			total = super.getSaldo() - (cantidad + 1);
-			super.setSaldo(total);
+			setSaldo((getSaldo() - cantidad) - 1);
 
-		} else {
-
-			System.out.println("No puede retirar mas de lo que hay en la cuenta");
 		}
 	}
 }

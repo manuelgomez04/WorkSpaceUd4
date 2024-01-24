@@ -3,9 +3,12 @@ package ejercicio06;
 public class CuentaCorriente extends Cuenta {
 
 	private double puntos;
+	private double mantenimiento;
 
-	public CuentaCorriente(Cliente usuario, double saldo, double mantenimiento) {
-		super(usuario, saldo, mantenimiento);
+	public CuentaCorriente(Cliente usuario, double saldo, double puntos, double mantenimiento) {
+		super(usuario, saldo);
+		this.puntos = puntos;
+		this.mantenimiento = mantenimiento;
 	}
 
 	public double getPuntos() {
@@ -16,29 +19,31 @@ public class CuentaCorriente extends Cuenta {
 		this.puntos = puntos;
 	}
 
+	public double getMantenimiento() {
+		return mantenimiento;
+	}
+
+	public void setMantenimiento(double mantenimiento) {
+		this.mantenimiento = mantenimiento;
+	}
+
 	public double calcularSaldo() {
-		return getSaldo() + getMantenimiento();
+		return getSaldo() - mantenimiento;
 	}
 
 	public void ingresarDinero(double cantidad) {
-		double total = 0, cien = 100.0;
+		double cien = 100.0;
 
-		total = getSaldo() + cantidad;
 		puntos = cantidad * cien;
-		super.setSaldo(total);
+		setSaldo(getSaldo() + cantidad - mantenimiento);
 	}
 
 	public void retirarDinero(double cantidad) {
-		double total = 0;
 
 		if (cantidad < getSaldo()) {
 
-			total = getSaldo() - cantidad;
-			setSaldo(total);
+			setSaldo(getSaldo() - cantidad);
 
-		} else {
-
-			System.out.println("No puede retirar mas de lo que hay en la cuenta");
 		}
 	}
 }

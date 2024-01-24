@@ -6,7 +6,7 @@ public class Libro extends Publicacion {
 		super(anioPublicacion, nombre, prestado);
 	}
 
-	public int prestados(Publicacion[] lista) {
+	public int contarPrestados(Publicacion[] lista) {
 		int contador = 0;
 
 		for (int i = 0; i < lista.length; i++) {

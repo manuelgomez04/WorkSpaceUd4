@@ -17,7 +17,7 @@ public class Oficina {
 	}
 
 	public double calcularSaldoCliente(Cuenta c) {
-		return c.getSaldo();
+		return c.calcularSaldo();
 	}
 
 	public double totalDinero() {
@@ -33,7 +33,7 @@ public class Oficina {
 		return total;
 	}
 
-	public double calcularGastos() {
+	public double calcularGastoCuentaJoven() {
 		double total = 0;
 
 		for (int i = 0; i < lista.length; i++) {

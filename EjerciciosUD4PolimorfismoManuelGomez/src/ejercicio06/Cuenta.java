@@ -3,13 +3,12 @@ package ejercicio06;
 public abstract class Cuenta {
 	private Cliente usuario;
 	private double saldo;
-	private double mantenimiento;
 
-	public Cuenta(Cliente usuario, double saldo, double mantenimiento) {
+	public Cuenta(Cliente usuario, double saldo) {
 		super();
 		this.usuario = usuario;
 		this.saldo = saldo;
-		this.mantenimiento = mantenimiento;
+
 	}
 
 	public Cliente getUsuario() {
@@ -26,14 +25,6 @@ public abstract class Cuenta {
 
 	public void setSaldo(double saldo) {
 		this.saldo = saldo;
-	}
-
-	public double getMantenimiento() {
-		return mantenimiento;
-	}
-
-	public void setMantenimiento(double mantenimiento) {
-		this.mantenimiento = mantenimiento;
 	}
 
 	public abstract double calcularSaldo();

@@ -2,11 +2,22 @@ package ejercicio01;
 
 public class Revista extends Publicacion {
 
-	public Revista(int anioPublicacion, String nombre, boolean prestado) {
+	private int numero;
+
+	public Revista(int anioPublicacion, String nombre, boolean prestado, int numero) {
 		super(anioPublicacion, nombre, prestado);
+		this.numero = numero;
 	}
 
-	public int prestados(Publicacion[] lista) {
+	public int getNumero() {
+		return numero;
+	}
+
+	public void setNumero(int numero) {
+		this.numero = numero;
+	}
+
+	public int contarPrestados(Publicacion[] lista) {
 
 		int contador = 0;
 
@@ -28,5 +39,11 @@ public class Revista extends Publicacion {
 		}
 
 		return contador;
+	}
+
+	public void avisarCincuenta(int num) {
+		if (numero == num) {
+			System.out.println("Enhorabuena, eres el comprador " + numero + " de la revista");
+		}
 	}
 }

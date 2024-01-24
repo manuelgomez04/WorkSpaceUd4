@@ -5,7 +5,7 @@ public class CuentaJoven extends Cuenta {
 	private int regalo;
 
 	public CuentaJoven(Cliente usuario, double saldo) {
-		super(usuario, saldo, 0);
+		super(usuario, saldo);
 	}
 
 	public int getRegalo() {
@@ -17,29 +17,23 @@ public class CuentaJoven extends Cuenta {
 	}
 
 	public double calcularSaldo() {
-		return getSaldo() + getMantenimiento();
+		return getSaldo();
 	}
 
 	public void ingresarDinero(double cantidad) {
-		double total = 0, uno = 1;
+		double uno = 1;
 
 		regalo += uno;
-		total = getSaldo() + cantidad + uno;
 
-		setSaldo(total);
+		setSaldo(getSaldo() + cantidad + regalo);
 	}
 
 	public void retirarDinero(double cantidad) {
-		double total = 0;
 
 		if (cantidad < getSaldo()) {
 
-			total = getSaldo() - cantidad;
-			setSaldo(total);
+			setSaldo(getSaldo() - cantidad);
 
-		} else {
-
-			System.out.println("No puede retirar mas de lo que hay en la cuenta");
 		}
 	}
 
