@@ -3,7 +3,7 @@ package ejercicio01;
 public class Principal {
 
 	public static void main(String[] args) {
-		int id = 7;
+		int id = 5;
 		int tam = 8;
 		int numHab = 0;
 
