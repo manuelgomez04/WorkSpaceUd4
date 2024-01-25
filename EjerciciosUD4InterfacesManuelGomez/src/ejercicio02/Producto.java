@@ -7,7 +7,7 @@ public class Producto implements IImpuesto {
 		return precio + precio * iva / cien;
 	}
 
-	public double calculoIrpf(double sueldo) {
+	public double calcularIrpf(double sueldo) {
 		return 0;
 	}
 

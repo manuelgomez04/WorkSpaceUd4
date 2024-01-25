@@ -4,5 +4,5 @@ public interface IImpuesto {
 
 	double calcularIva(double precio, int iva);
 
-	double calculoIrpf(double sueldo);
+	double calcularIrpf(double sueldo);
 }
