@@ -17,7 +17,6 @@ public class Carta extends Documento {
 		this.fecha = fecha;
 	}
 
-	@Override
 	public String toString() {
 		return super.toString() + " Fecha= " + fecha;
 	}
