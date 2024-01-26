@@ -3,8 +3,8 @@ package ejercicio01;
 public class Principal {
 
 	public static void main(String[] args) {
-		int id = 5;
-		int tam = 8;
+		int id = 7;
+		int tam = 7;
 		int numHab = 0;
 
 		Habitacion h1 = new Habitacion(100, false, "Juanjo", 5, 5, 1);

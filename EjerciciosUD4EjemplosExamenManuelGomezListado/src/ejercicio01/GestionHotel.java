@@ -28,7 +28,7 @@ public class GestionHotel {
 		int i = 0;
 		boolean encontrado = false;
 		while (i < numHab && !encontrado) {
-			if (lista[i].getIdHabitacion() == id && lista[i] instanceof Apartamento) {
+			if (lista[i] instanceof Apartamento) {
 
 				encontrado = true;
 
@@ -36,12 +36,25 @@ public class GestionHotel {
 				i++;
 			}
 		}
-		System.out.println(lista[i]);
+		// System.out.println(lista[i]);
 
 		if (encontrado) {
 			return lista[i];
 		} else {
 			return null;
+		}
+	}
+
+	public Habitacion[] buscarLista(int numHab, String categoria) {
+
+		int i = 0;
+
+		Habitacion[] listado = new Habitacion[numHab];
+
+		while (i < numHab) {
+			if (lista[i].getNombreCliente().equalsIgnoreCase(categoria)) {
+				listado[i] = lista[i];
+			}
 		}
 	}
 }
